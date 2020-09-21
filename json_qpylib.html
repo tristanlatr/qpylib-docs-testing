@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.1" />
+<title>qpylib.json_qpylib API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/foundation.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+<link rel="canonical" href="https://pdoc3.github.io/pdoc/doc/qpylib/json_qpylib.html">
+<style>.homelink{display:block;font-size:2em;font-weight:bold;color:#555;padding-bottom:.5em;border-bottom:1px solid silver}.homelink:hover{color:inherit}.homelink img{max-width:20%;max-height:5em;margin:auto;margin-bottom:.3em}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>qpylib.json_qpylib</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+<a href="https://github.com/IBM/qpylib/blob/fb2f6b4c0fcb5e57c228cee8d97bddbc134d33aa/qpylib/json_qpylib.py#L0-L97" class="git-link">Browse git</a>
+</summary>
+<pre><code class="python"># Copyright 2019 IBM Corporation All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+import json
+from . import app_qpylib
+
+JSONLD_TYPES = {}
+KEY_CONTEXT = &#39;@context&#39;
+KEY_TYPE = &#39;@type&#39;
+KEY_ID = &#39;@id&#39;
+
+def register_jsonld_endpoints():
+    try:
+        services = app_qpylib.get_manifest_json()[&#39;services&#39;]
+    except KeyError:
+        return
+
+    for service in services:
+        try:
+            endpoints = service[&#39;endpoints&#39;]
+        except KeyError:
+            continue
+        for endpoint in endpoints:
+            _extract_and_register_jsonld_context(endpoint, &#39;request_mime_type&#39;, &#39;request_body_type&#39;)
+            try:
+                _extract_and_register_jsonld_context(endpoint[&#39;response&#39;], &#39;mime_type&#39;, &#39;body_type&#39;)
+            except KeyError:
+                pass
+
+def _extract_and_register_jsonld_context(endpoint_direction, mime_id, body_id):
+    try:
+        if endpoint_direction[mime_id] == &#39;application/json+ld&#39;:
+            register_jsonld_type_from_context(endpoint_direction[body_id])
+    except KeyError:
+        pass
+
+def register_jsonld_type(jsonld_type, context):
+    global JSONLD_TYPES
+    JSONLD_TYPES[str(jsonld_type)] = context
+
+def register_jsonld_type_from_context(context):
+    jsonld_type = _extract_type_from_context(context)
+    if jsonld_type:
+        register_jsonld_type(jsonld_type, context)
+
+def _extract_type_from_context(context):
+    if KEY_CONTEXT in context.keys():
+        at_context = context[KEY_CONTEXT]
+        if KEY_TYPE in at_context.keys():
+            if at_context[KEY_TYPE] == KEY_ID and KEY_ID in at_context.keys():
+                return at_context[KEY_ID]
+            return at_context[KEY_TYPE]
+    return None
+
+def get_jsonld_type(jsonld_type):
+    global JSONLD_TYPES
+    try:
+        return JSONLD_TYPES[str(jsonld_type)]
+    except KeyError:
+        raise ValueError(&#39;JSON-LD type {0} has not been registered&#39;.format(str(jsonld_type)))
+
+def render_jsonld_type(jld_type, data, jld_id=None):
+    jld_context = get_jsonld_type(jld_type)
+    json_dict = {KEY_CONTEXT: jld_context[KEY_CONTEXT], KEY_TYPE: jld_type}
+    if jld_id:
+        json_dict[KEY_ID] = jld_id
+    for json_key in data:
+        json_dict[json_key] = data[json_key]
+    return json.dumps(json_dict, sort_keys=True)
+
+# pylint: disable=too-many-arguments
+def json_ld(jld_context, jld_id, jld_type, name, description, data):
+    return json.dumps({KEY_CONTEXT: jld_context, KEY_ID: jld_id, KEY_TYPE: jld_type, &#39;name&#39;: name,
+                       &#39;description&#39;: description, &#39;data&#39;: data}, sort_keys=True)
+
+def json_html(html):
+    return json.dumps({&#39;html&#39;: html})
+
+def to_json_dict(python_obj, classkey=None):
+    if isinstance(python_obj, str):
+        return python_obj
+    if isinstance(python_obj, dict):
+        data = {}
+        for (k, val) in list(python_obj.items()):
+            data[k] = to_json_dict(val, classkey)
+        return data
+    if hasattr(python_obj, &#34;__iter__&#34;):
+        return [to_json_dict(v, classkey) for v in python_obj]
+    # pylint: disable=consider-using-dict-comprehension
+    if hasattr(python_obj, &#34;__dict__&#34;):
+        data = dict([(key, to_json_dict(value, classkey))
+                     for key, value in python_obj.__dict__.items()
+                     if not callable(value) and not key.startswith(&#39;_&#39;)])
+        if classkey is not None and hasattr(python_obj, &#34;__class__&#34;):
+            data[classkey] = python_obj.__class__.__name__
+        return data
+    return python_obj</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="qpylib.json_qpylib.register_jsonld_endpoints"><code class="name flex">
+<span>def <span class="ident">register_jsonld_endpoints</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+<a href="https://github.com/IBM/qpylib/blob/fb2f6b4c0fcb5e57c228cee8d97bddbc134d33aa/qpylib/json_qpylib.py#L13-L29" class="git-link">Browse git</a>
+</summary>
+<pre><code class="python">def register_jsonld_endpoints():
+    try:
+        services = app_qpylib.get_manifest_json()[&#39;services&#39;]
+    except KeyError:
+        return
+
+    for service in services:
+        try:
+            endpoints = service[&#39;endpoints&#39;]
+        except KeyError:
+            continue
+        for endpoint in endpoints:
+            _extract_and_register_jsonld_context(endpoint, &#39;request_mime_type&#39;, &#39;request_body_type&#39;)
+            try:
+                _extract_and_register_jsonld_context(endpoint[&#39;response&#39;], &#39;mime_type&#39;, &#39;body_type&#39;)
+            except KeyError:
+                pass</code></pre>
+</details>
+</dd>
+<dt id="qpylib.json_qpylib.register_jsonld_type"><code class="name flex">
+<span>def <span class="ident">register_jsonld_type</span></span>(<span>jsonld_type, context)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+<a href="https://github.com/IBM/qpylib/blob/fb2f6b4c0fcb5e57c228cee8d97bddbc134d33aa/qpylib/json_qpylib.py#L38-L40" class="git-link">Browse git</a>
+</summary>
+<pre><code class="python">def register_jsonld_type(jsonld_type, context):
+    global JSONLD_TYPES
+    JSONLD_TYPES[str(jsonld_type)] = context</code></pre>
+</details>
+</dd>
+<dt id="qpylib.json_qpylib.register_jsonld_type_from_context"><code class="name flex">
+<span>def <span class="ident">register_jsonld_type_from_context</span></span>(<span>context)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+<a href="https://github.com/IBM/qpylib/blob/fb2f6b4c0fcb5e57c228cee8d97bddbc134d33aa/qpylib/json_qpylib.py#L42-L45" class="git-link">Browse git</a>
+</summary>
+<pre><code class="python">def register_jsonld_type_from_context(context):
+    jsonld_type = _extract_type_from_context(context)
+    if jsonld_type:
+        register_jsonld_type(jsonld_type, context)</code></pre>
+</details>
+</dd>
+<dt id="qpylib.json_qpylib.get_jsonld_type"><code class="name flex">
+<span>def <span class="ident">get_jsonld_type</span></span>(<span>jsonld_type)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+<a href="https://github.com/IBM/qpylib/blob/fb2f6b4c0fcb5e57c228cee8d97bddbc134d33aa/qpylib/json_qpylib.py#L56-L61" class="git-link">Browse git</a>
+</summary>
+<pre><code class="python">def get_jsonld_type(jsonld_type):
+    global JSONLD_TYPES
+    try:
+        return JSONLD_TYPES[str(jsonld_type)]
+    except KeyError:
+        raise ValueError(&#39;JSON-LD type {0} has not been registered&#39;.format(str(jsonld_type)))</code></pre>
+</details>
+</dd>
+<dt id="qpylib.json_qpylib.render_jsonld_type"><code class="name flex">
+<span>def <span class="ident">render_jsonld_type</span></span>(<span>jld_type, data, jld_id=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+<a href="https://github.com/IBM/qpylib/blob/fb2f6b4c0fcb5e57c228cee8d97bddbc134d33aa/qpylib/json_qpylib.py#L63-L70" class="git-link">Browse git</a>
+</summary>
+<pre><code class="python">def render_jsonld_type(jld_type, data, jld_id=None):
+    jld_context = get_jsonld_type(jld_type)
+    json_dict = {KEY_CONTEXT: jld_context[KEY_CONTEXT], KEY_TYPE: jld_type}
+    if jld_id:
+        json_dict[KEY_ID] = jld_id
+    for json_key in data:
+        json_dict[json_key] = data[json_key]
+    return json.dumps(json_dict, sort_keys=True)</code></pre>
+</details>
+</dd>
+<dt id="qpylib.json_qpylib.json_ld"><code class="name flex">
+<span>def <span class="ident">json_ld</span></span>(<span>jld_context, jld_id, jld_type, name, description, data)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+<a href="https://github.com/IBM/qpylib/blob/fb2f6b4c0fcb5e57c228cee8d97bddbc134d33aa/qpylib/json_qpylib.py#L73-L75" class="git-link">Browse git</a>
+</summary>
+<pre><code class="python">def json_ld(jld_context, jld_id, jld_type, name, description, data):
+    return json.dumps({KEY_CONTEXT: jld_context, KEY_ID: jld_id, KEY_TYPE: jld_type, &#39;name&#39;: name,
+                       &#39;description&#39;: description, &#39;data&#39;: data}, sort_keys=True)</code></pre>
+</details>
+</dd>
+<dt id="qpylib.json_qpylib.json_html"><code class="name flex">
+<span>def <span class="ident">json_html</span></span>(<span>html)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+<a href="https://github.com/IBM/qpylib/blob/fb2f6b4c0fcb5e57c228cee8d97bddbc134d33aa/qpylib/json_qpylib.py#L77-L78" class="git-link">Browse git</a>
+</summary>
+<pre><code class="python">def json_html(html):
+    return json.dumps({&#39;html&#39;: html})</code></pre>
+</details>
+</dd>
+<dt id="qpylib.json_qpylib.to_json_dict"><code class="name flex">
+<span>def <span class="ident">to_json_dict</span></span>(<span>python_obj, classkey=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+<a href="https://github.com/IBM/qpylib/blob/fb2f6b4c0fcb5e57c228cee8d97bddbc134d33aa/qpylib/json_qpylib.py#L80-L98" class="git-link">Browse git</a>
+</summary>
+<pre><code class="python">def to_json_dict(python_obj, classkey=None):
+    if isinstance(python_obj, str):
+        return python_obj
+    if isinstance(python_obj, dict):
+        data = {}
+        for (k, val) in list(python_obj.items()):
+            data[k] = to_json_dict(val, classkey)
+        return data
+    if hasattr(python_obj, &#34;__iter__&#34;):
+        return [to_json_dict(v, classkey) for v in python_obj]
+    # pylint: disable=consider-using-dict-comprehension
+    if hasattr(python_obj, &#34;__dict__&#34;):
+        data = dict([(key, to_json_dict(value, classkey))
+                     for key, value in python_obj.__dict__.items()
+                     if not callable(value) and not key.startswith(&#39;_&#39;)])
+        if classkey is not None and hasattr(python_obj, &#34;__class__&#34;):
+            data[classkey] = python_obj.__class__.__name__
+        return data
+    return python_obj</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<header>
+<a class="homelink" rel="home" title="QRadar App Python Library (qpylib)" href="Link to the hosted documentation website">
+qpylib
+</a>
+</header>
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.15.3/tingle.min.css" integrity="sha512-j1u8eUJ4f23xPPxwOrLUPQaCD2dwzNqqmDDcWS4deWsMv2ohLqmXXuP3hU7g8TyzbMSakP/mMqoNBYWj8AEIFg==" crossorigin>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.15.3/tingle.min.js" integrity="sha512-plGUER9JkeEWPPqQBE4sdLqBoQug5Ap+BCGMc7bJ8BXkm+VVj6QzkpBz5Yv2yPkkq+cqg9IpkBaGCas6uDbW8g==" crossorigin></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = 'search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="qpylib" href="index.html">qpylib</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="qpylib.json_qpylib.register_jsonld_endpoints" href="#qpylib.json_qpylib.register_jsonld_endpoints">register_jsonld_endpoints</a></code></li>
+<li><code><a title="qpylib.json_qpylib.register_jsonld_type" href="#qpylib.json_qpylib.register_jsonld_type">register_jsonld_type</a></code></li>
+<li><code><a title="qpylib.json_qpylib.register_jsonld_type_from_context" href="#qpylib.json_qpylib.register_jsonld_type_from_context">register_jsonld_type_from_context</a></code></li>
+<li><code><a title="qpylib.json_qpylib.get_jsonld_type" href="#qpylib.json_qpylib.get_jsonld_type">get_jsonld_type</a></code></li>
+<li><code><a title="qpylib.json_qpylib.render_jsonld_type" href="#qpylib.json_qpylib.render_jsonld_type">render_jsonld_type</a></code></li>
+<li><code><a title="qpylib.json_qpylib.json_ld" href="#qpylib.json_qpylib.json_ld">json_ld</a></code></li>
+<li><code><a title="qpylib.json_qpylib.json_html" href="#qpylib.json_qpylib.json_html">json_html</a></code></li>
+<li><code><a title="qpylib.json_qpylib.to_json_dict" href="#qpylib.json_qpylib.to_json_dict">to_json_dict</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<span>This software is licensed under the <a href="https://github.com/IBM/qpylib/blob/master/LICENSE">Apache License 2.0</a></span>
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.1</a>.</p>
+</footer>
+</body>
+</html>
